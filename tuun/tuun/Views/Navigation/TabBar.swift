@@ -1,3 +1,11 @@
+//
+//  TabBar.swift
+//  tuun
+//
+//  Created on 12/14/25.
+//
+
+
 import SwiftUI
 
 enum Tab: Int, CaseIterable {
@@ -46,7 +54,6 @@ struct TabBar: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             
-            // Tab Bar
             HStack(spacing: 0) {
                 ForEach(Tab.allCases, id: \.self) { tab in
                     Button {
