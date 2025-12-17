@@ -2,7 +2,7 @@
 //  tuunTests.swift
 //  tuunTests
 //
-//  Created by Cole Uyematsu on 10/18/25.
+//  Created on 10/18/25.
 //
 
 import Testing
