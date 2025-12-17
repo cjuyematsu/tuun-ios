@@ -40,7 +40,7 @@ enum Tab: Int, CaseIterable {
 }
 
 struct TabBar: View {
-    @State private var selectedTab: Tab = .home
+    @Binding var selectedTab: Tab
     
     var body: some View {
         VStack(spacing: 0) {
@@ -57,7 +57,9 @@ struct TabBar: View {
             HStack(spacing: 0) {
                 ForEach(Tab.allCases, id: \.self) { tab in
                     Button {
-                        selectedTab = tab
+                        withAnimation(.easeInOut(duration: 0.15)) {
+                            selectedTab = tab
+                        }
                     } label: {
                         VStack(spacing: 5) {
                             Image(selectedTab == tab ? tab.iconSelected : tab.icon)

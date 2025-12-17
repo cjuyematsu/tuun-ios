@@ -10,6 +10,7 @@ import CoreText
 
 @main
 struct tuunApp: App {
+    @State private var selectedTab: Tab = .home
     
     init() {
         registerFonts()
@@ -17,7 +18,7 @@ struct tuunApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabBar()
+            TabBar(selectedTab: $selectedTab)
         }
     }
 
